@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:robocode/Setup/signIn.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'RoboCode',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'RoboCode Login'),
+      home: LoginPage(),
     );
   }
 }
-
-
+/*
 class SecondRoute extends StatelessWidget {
   final String text;
 
@@ -26,7 +26,7 @@ class SecondRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Icon(Icons.home),
+        //title: Icon(Icons.home),
         backgroundColor: Colors.blueAccent,
       ),
       body: Center(
@@ -50,6 +50,62 @@ class SecondRoute extends StatelessWidget {
           ),
         ),
       ),
+      drawer: Drawer(
+        // Add a ListView to the drawer. This ensures the user can scroll
+        // through the options in the drawer if there isn't enough vertical
+        // space to fit everything.
+        child: ListView(
+          // Important: Remove any padding from the ListView.
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              //child:Column(
+
+              //),
+              child: Text(text),
+              decoration: BoxDecoration(
+                shape:  BoxShape.circle,
+                  //color: Colors.greenAccent,
+                  image: new DecorationImage(
+                    //fit: BoxFit.none,
+                    centerSlice: new Rect.fromLTWH(50.0, 50.0, 220.0, 90.0),
+                      image: new AssetImage(
+                    "assets/logo.png",
+                  )
+                      //NetworkImage(
+                      //"http://jlouage.com/images/author.jpg")
+                      )),
+            ),
+            ListTile(
+              title: Text('Chose level'),
+              selected: true,
+              onTap: () {
+                // Update the state of the app.
+                // ...
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: Text('Edit profile'),
+              onTap: () {
+                // Update the state of the app.
+                // ...
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: Text('Logout'),
+
+              onTap: () {
+                // Update the state of the app.
+                // ...
+                // Then close the drawer.
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
@@ -61,6 +117,7 @@ class MyHomePage extends StatefulWidget {
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
+
 class _MyHomePageState extends State<MyHomePage> {
   TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
 
@@ -75,31 +132,35 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    /*************************************************************************** */
     final usernameField = TextField(
       controller: myController,
       obscureText: false,
       style: style,
       decoration: InputDecoration(
-        suffixIcon:Icon(
-          Icons.person,
-        ),
+          suffixIcon: Icon(
+            Icons.person,
+          ),
           contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
           hintText: "username",
           border:
-              OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
+              OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))
+              ),
     );
     final passwordField = TextField(
       obscureText: true,
       style: style,
       decoration: InputDecoration(
-                suffixIcon:Icon(
-          Icons.lock,
-        ),
+          suffixIcon: Icon(
+            Icons.lock,
+          ),
           contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
           hintText: "Password",
           border:
-              OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
+              OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))
+              ),
     );
+    /**********************************************************************************/
     final loginButon = Material(
       elevation: 5.0,
       borderRadius: BorderRadius.circular(30.0),
@@ -107,7 +168,7 @@ class _MyHomePageState extends State<MyHomePage> {
       child: MaterialButton(
         minWidth: MediaQuery.of(context).size.width,
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-        onPressed: () {
+        onPressed: () {/*
           Navigator.push(
               context,
               MaterialPageRoute(
@@ -125,7 +186,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 content: Text("Hello " + myController.text),
               );
             },
-          );
+          );*/
         },
         child: Text("Login",
             textAlign: TextAlign.center,
@@ -135,6 +196,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
 
     return Scaffold(
+      /************************************************************************** */
       body: Center(
         child: Container(
           decoration: BoxDecoration(
@@ -183,6 +245,8 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       ),
+      /********************************************************************************* */
     );
   }
 }
+*/

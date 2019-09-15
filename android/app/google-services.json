@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "770697486285",
+    "firebase_url": "https://robocode03121997.firebaseio.com",
+    "project_id": "robocode03121997",
+    "storage_bucket": "robocode03121997.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:770697486285:android:16e6efd5610cb47c",
+        "android_client_info": {
+          "package_name": "com.example.robocode"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "770697486285-fh9jqkgtb829tsb1rl1vnmrsirt7arm2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD72xRYN6F0pK4XV4vNtwMs7OkOjZFpJIM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "770697486285-fh9jqkgtb829tsb1rl1vnmrsirt7arm2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "770697486285-55t8fppb8ekmk7kqfp6l3opa82cjpn7e.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "Runner.xcodeproj"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
